@@ -1,26 +1,52 @@
-import java.util.Scanner:
-Public class Simple Converter{
-  Public static void main(String[]args){
-    Scanner sc = new Scannner(System.in)
+import java.util.Scanner;
 
-     System.out.println("1.Km to Meter");
-     System.out.println("2.Meter to Km");
-     System.out.println("Choose a option");
+public class SimpleConverter {
 
-int choice = sc.nextInt();
-if(choice==1){
-   System.out.println("Enter a value in Km:");
-   Double km = sc.nextDouble();
-   System.out.println("In Meters= "+(km*1000));
-}
+    public static void main(String[] args) {
 
-lse if(choice==2){
-   System.out.println("Enter a value in Meteres:");
-   Double m = sc.nextDouble();
-   System.out.println("In Kilometers = "+(km*1000));
-}
-else{
-  System.out.println("Invalid Choice entered");
-}
-}
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("1. Km to Meter");
+        System.out.println("2. Meter to Km");
+        System.out.println("3. Centimeter to Meter");
+        System.out.println("4. Meter to Centimeter");
+        System.out.print("Choose an option: ");
+
+        int choice = sc.nextInt();
+
+        if (choice == 1) {
+
+            System.out.print("Enter a value in Km: ");
+            double km = sc.nextDouble();
+
+            System.out.println("In Meters = " + (km * 1000));
+
+        } else if (choice == 2) {
+
+            System.out.print("Enter a value in Meters: ");
+            double m = sc.nextDouble();
+
+            System.out.println("In Kilometers = " + (m / 1000));
+
+        } else if (choice == 3) {
+
+            System.out.print("Enter a value in Centimeters: ");
+            double c = sc.nextDouble();
+
+            System.out.println("In Meters = " + (c / 100));
+
+        } else if (choice == 4) {
+
+            System.out.print("Enter a value in Meters: ");
+            double m = sc.nextDouble();
+
+            System.out.println("In Centimeters = " + (m * 100));
+
+        } else {
+
+            System.out.println("Invalid Choice entered");
+        }
+
+        sc.close();
+    }
 }
